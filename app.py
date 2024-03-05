@@ -1,12 +1,18 @@
 # import flask 
 
-from flask import Flask,request,make_response
+from flask import Flask,request,make_response,render_template
 import pickle
 # create Falsk 
 app = Flask(__name__);
 
 # create end points 
-
+@app.route("/")
+def home():
+    return render_template('index.html',message="Welcome")
+@app.route('/login', methods=["POST"])
+def login():
+    username = request.form['username']
+    return       "Login success"+username
 @app.route("/<ename>")
 def index(ename):
     return "Hello World"+ename;
