@@ -12,7 +12,7 @@ def home():
 @app.route('/login', methods=["POST"])
 def login():
     username = request.form['username']
-    return       "Login success"+username
+    return       "Login success ****"+username
 @app.route("/<ename>")
 def index(ename):
     return "<h1>Hello World"+ename+"</h1>";
