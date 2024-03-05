@@ -15,7 +15,8 @@ def login():
     return       "Login success"+username
 @app.route("/<ename>")
 def index(ename):
-    return "Hello World"+ename;
+    return "<h1>Hello World"+ename+"</h1>";
+#------------------------------------
 @app.route("/post", methods=["POST"])
 def postMethod():
     # name = request.args['name']
@@ -25,10 +26,10 @@ def postMethod():
      print(loanapplication)
      status = isEligibleforLoan(loanapplication)
      if status==1:
-         return "Eligible for loan"
+         return "<h1>Eligible for loan</h1>"
      else :
 
-        return "Not Eligible for loan"
+        return "<h1>Not Eligible for loan</h1>"
 
 
 
