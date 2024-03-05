@@ -1,0 +1,8 @@
+{
+   "dependents":1,
+   "education":1,
+   "income":2345,
+   "amount":120000,
+   "credithistory":0,
+   "area":3
+}
